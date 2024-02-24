@@ -766,6 +766,8 @@ StrategyInitialize(bool init)
 			lru_list->_list[i]._id = UNUSED_NODE;
 			lru_list->_list[i]._next = INVALID_NODE;
 			lru_list->_list[i]._prev = INVALID_NODE;
+			lru_list->_list[i].first_lru = NOT_RECENTLY_USED;
+			lru_list->_list[i].second_lru = NOT_RECENTLY_USED;
 		}
 	} else {
 		Assert(!init);
